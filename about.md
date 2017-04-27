@@ -1,7 +1,13 @@
 ---
 layout: page
-title: About
+title: Thông tin nhóm
 permalink: /about/
 ---
-
-[Jekyll Writer](http://www.jekyllwriter.com) is a Jekyll blog site writer. You may download Jekyll Writer for Windows, OS X and Linux from our [official website](http://www.jekyllwriter.com).
+THÀNH VIÊN 1: [LƯU TRẦN ANH KIỆT]
+	-MSSV:
+	-Email:
+	-Github@acc:
+THÀNH VIÊN 1: [LƯU TRẦN ANH KIỆT]
+	-MSSV:
+	-Email:
+	-Github@acc:
