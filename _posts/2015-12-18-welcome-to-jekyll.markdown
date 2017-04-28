@@ -7,24 +7,24 @@ tags:
 categories:
 
 ---
-## Phần giới thiệu
+# Phần giới thiệu
 React-native là framewokd giúp lập trình viên viết ứng dụng trên nền tảng android và iOS, sử dụng javasript nhưng mang lại cảm giác native app thực sự.
 Ở React-native có ưu điểm là tích hợp tính năng Live Reaload khác với ReLoad. Nếu ReLoad  cần tải lại mã nguồn để cập nhật thì Live ReLoad chỉ cập nhập lại các chức năng của tập tin nếu có sự thay đổi.
 Cài đặt Node js, SDK tool, thiết bị máy ảo, Android studio, set lại biến Environment, đường dẫn path, PATH.
 Để tạo react-native ta dùng lệnh cmd: npm install –g react-native cli.
 Để run một folder tại tại folder đó ta dùng cmd: react-native run-android.
-### Cách hoạt động của React-native.
+## Cách hoạt động của React-native.
 Gồm phần View ( hiển thị ) và phần xử lí.
   * Phần hiển thị biên dịch từ java sẽ map với component.
   * Phần xử lí được thực hiện trực tiếp bằng javascript được xử lí dưới bộ core của 
   javascript, không phải thông dịch qua java.
-##### Ưu điểm: 
+### Ưu điểm: 
   * Mang lại cảm giác trải nghiệm giống native.
   * Có thể tiếp cận nhiều hơn với ko chỉ javascript mà còn web.
-#####Khuyết điểm: 
+### Khuyết điểm: 
   * Còn thiếu nhiều Component view.
   * Chỉ hỗ trợ cho IOS và Android, không hỗ trợ Window Phone.
-  *Không build được các ứng dụng phức tạp vì mỗi ứng dụng native  bằng javascript luôn có các component được viết sẵn. Vì vậy khi ứng dụng của bạn quá phức tạp bạn phải chỉnh sửa lại component  viết bằng ngôn ngữ IOS hoặc android thì mới build được.
+  * Không build được các ứng dụng phức tạp vì mỗi ứng dụng native  bằng javascript luôn có các component được viết sẵn. Vì vậy khi ứng dụng của bạn quá phức tạp bạn phải chỉnh sửa lại component  viết bằng ngôn ngữ IOS hoặc android thì mới build được.
 
 ### Cách xây dựng chức năng cơ bản của React-native.
  * B1: Import các thư viện
@@ -37,7 +37,7 @@ Gồm phần View ( hiển thị ) và phần xử lí.
   * Có thể có Class phụ , khi đó ta cần đặt từ khóa export default trước class phụ đó (thường android sẽ không hỗ trợ cách thiết kế này mà thay vào đó thiết kế một component riêng biệt ở một thư mục khác).
 
 ## Về phần seminar:
-#### Component của project:
+### Component của project:
   * gồm thư mục con screen chứa file ManHinh1.js là màn hình chính, và Manhinh2.js là màn hình phụ được gọi sau khi click button ở màn hình chính và ngược lại. 
   *	thư mục api gồm file api.js với chức năng tạo kết nối trên firebase-một dbms lưu dữ liệu trực tuyến.
   * Để tạo firebase ta vào trang chủ https://console.firebase.google.com/ sau đó ta khởi tạo một database mới trong mục creat project  sau khi nhấn nút create xong bạn sẽ lấy được file cấu hình của database treenn firebase. Copy mớ đó vào trong file api.js . Database được lưu dưới dạng object, nó sẽ lưu key của từng dòng dữ liệu, mỗi dòng dữ liệu được cấp một key  trong mỗi key lưu username và password.
@@ -45,25 +45,24 @@ Gồm phần View ( hiển thị ) và phần xử lí.
   * thư mục styles để định nghĩa css. Cuối class ta sử dụng từ khóa export default styles để tạo biến styles là biến toàn cục để truy xuất các thuộc tính trong css ta chỉ cần gọi this.styles.tenthuoctinh. Tại các file screen muốn gọi css phải import file vào.
  * B3: Đăng kí Register cho các Component. Vì một project có nhiều Component ta đăng kí Register để chọn component được chọn.
 
-#### Tương tác các màn hình gọi lẫn nhau trong thư mục index.android.js
-##### Cách thiết kế các màn hình trong Component với các phương thức class được khởi tạo.
+### Tương tác các màn hình gọi lẫn nhau trong thư mục index.android.js
+#### Cách thiết kế các màn hình trong Component với các phương thức class được khởi tạo.
 
 Cách tạo một Component phụ.
   * Tại folder chính chỉ có một Component , để tạo một component khác ta phải tạo một folder từ thư mục gốc ta tạo một file.js ( Tên file phải có kí tự đầu tiên là chữ hoa) .
 
   * file.js  ta thiết kế một như một Component chính, nhưng tại class này không có Register.
- Để gọi component  phụ này ta phải import vào Component chính theo định dạng
-       *Import  tenclass  from ‘ ./folder/file.js’*  
-       *(với ./ là để di chuyển tới thư mục gốc ).*
+ Để gọi component  phụ này ta phải import vào Component chính theo định dạng:
+* *Import  tenclass  from ‘ ./folder/file.js’ (với ./ là để di chuyển tới thư mục gốc)*
   * Sử dụng Constructer  và state để thiết lập trạng thái cho khởi tạo ban đầu.
-##### Cách các màn hình gọi nhau
+#### Cách các màn hình gọi nhau
    > Sử dụng Nagivator để định nghĩa sựa lựa chọn màn hình được sử dụng. Trong Nagivator sẽ có 2 thuộc tính là Interout : để chỉ là lấy chọn mang hình nào  Renderscene để thực hiện lựa chọn nào( route,nagivator ). Sử dụng switch-case để truyền vào tên màn hình và sử dụng nagivator để push vào tên màn hình sẽ được gọi.
 
 **Thiết kế các design pattern trong file Ha.js và Manhinh2.js**
 Để kéo thả images ta có thể dùng require để lấy ra hình ảnh nội bộ, và hình ảnh internet ta phải dùng biến môi trường uri để load hình ảnh.
  *Ha.js : Gồm hiển thị ListView, đăng nhập, đăng kí tài khoản.*
-Để xem cách sử dụng của các phương thức ta vào [đây](https://facebook.github.io/react-native) có hướng dẫn đầy đủ các phương thức.
-Cách sử dụng ListView: 
+Để xem cách sử dụng của các phương thức ta vào [đây](https://facebook.github.io/react-native) có hướng dẫn đầy đủ các phương thức. 
+#### Cách sử dụng ListView: 
 **Đọc dữ liệu từ firebase** 
   * database=firebase.database() *để gọi database từ firebase*                        * user=database.ref('User'); *thực hiện referencen đến bảng User trên db*
   * dataSource:newListView.DataSource({rowHasChanged:(r1,r2)=>r1!==r2}) *để  khởi tạo datasoure bằng một giá trị ListView*
