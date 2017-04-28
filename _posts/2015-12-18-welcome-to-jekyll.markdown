@@ -9,4 +9,3 @@ categories:
 ---
 Nội dung báo cáo seminar
 
-This theme is published under MIT License, I hope you may like it =)
