@@ -18,10 +18,10 @@ Gồm phần View ( hiển thị ) và phần xử lí.
   * Phần hiển thị biên dịch từ java sẽ map với component.
   * Phần xử lí được thực hiện trực tiếp bằng javascript được xử lí dưới bộ core của 
   javascript, không phải thông dịch qua java.
-##### Ưu điểm: 
+**Ưu điểm:** 
   * Mang lại cảm giác trải nghiệm giống native.
   * Có thể tiếp cận nhiều hơn với ko chỉ javascript mà còn web.
-##### Khuyết điểm: 
+**Khuyết điểm:** 
   * Còn thiếu nhiều Component view.
   * Chỉ hỗ trợ cho IOS và Android, không hỗ trợ Window Phone.
   * Không build được các ứng dụng phức tạp vì mỗi ứng dụng native  bằng javascript luôn có các component được viết sẵn. Vì vậy khi ứng dụng của bạn quá phức tạp bạn phải chỉnh sửa lại component  viết bằng ngôn ngữ IOS hoặc android thì mới build được.
