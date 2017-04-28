@@ -18,10 +18,10 @@ Gồm phần View ( hiển thị ) và phần xử lí.
   * Phần hiển thị biên dịch từ java sẽ map với component.
   * Phần xử lí được thực hiện trực tiếp bằng javascript được xử lí dưới bộ core của 
   javascript, không phải thông dịch qua java.
-### Ưu điểm: 
+##### Ưu điểm: 
   * Mang lại cảm giác trải nghiệm giống native.
   * Có thể tiếp cận nhiều hơn với ko chỉ javascript mà còn web.
-### Khuyết điểm: 
+##### Khuyết điểm: 
   * Còn thiếu nhiều Component view.
   * Chỉ hỗ trợ cho IOS và Android, không hỗ trợ Window Phone.
   * Không build được các ứng dụng phức tạp vì mỗi ứng dụng native  bằng javascript luôn có các component được viết sẵn. Vì vậy khi ứng dụng của bạn quá phức tạp bạn phải chỉnh sửa lại component  viết bằng ngôn ngữ IOS hoặc android thì mới build được.
@@ -46,7 +46,7 @@ Gồm phần View ( hiển thị ) và phần xử lí.
  * B3: Đăng kí Register cho các Component. Vì một project có nhiều Component ta đăng kí Register để chọn component được chọn.
 
 ### Tương tác các màn hình gọi lẫn nhau trong thư mục index.android.js
-#### Cách thiết kế các màn hình trong Component với các phương thức class được khởi tạo.
+### Cách thiết kế các màn hình trong Component với các phương thức class được khởi tạo.
 
 Cách tạo một Component phụ.
   * Tại folder chính chỉ có một Component , để tạo một component khác ta phải tạo một folder từ thư mục gốc ta tạo một file.js ( Tên file phải có kí tự đầu tiên là chữ hoa) .
